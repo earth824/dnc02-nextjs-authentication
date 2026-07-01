@@ -13,6 +13,7 @@ export default async function ProfilePage() {
   return (
     <div>
       <h1>Email: {session.user?.email}</h1>
+      <p>Role: </p>
       <form action={logout}>
         <button>Logout</button>
       </form>
