@@ -6,3 +6,9 @@ export const loginSchema = z.object({
 });
 
 export type LoginInput = z.infer<typeof loginSchema>;
+
+export const postSchema = z.object({
+  title: z.string().trim().min(1)
+});
+
+export type PostInput = z.infer<typeof postSchema>;

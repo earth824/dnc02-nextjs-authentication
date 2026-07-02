@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation';
 
 export default async function ProfilePage() {
   const session = await auth();
-  console.log(session);
+  // console.log(session);
 
   if (!session) {
     redirect('/login');
@@ -13,7 +13,7 @@ export default async function ProfilePage() {
   return (
     <div>
       <h1>Email: {session.user?.email}</h1>
-      <p>Role: </p>
+      <p>Role: {session.user?.role}</p>
       <form action={logout}>
         <button>Logout</button>
       </form>
